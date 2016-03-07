@@ -1,3 +1,4 @@
 class Article < ActiveRecord::Base
-  validates :title, presence: true, length: { minimum: 5 } # È·±£Ã¿ÆªÎÄÕÂ¶¼ÓÐÒ»¸ö±êÌâ£¬¶øÇÒÖÁÉÙÓÐÎå¸ö×Ö·û¡£
+  has_many :comments
+  validates :title, presence: true, length: { minimum: 5 } # ç¡®ä¿æ¯ç¯‡æ–‡ç« éƒ½æœ‰ä¸€ä¸ªæ ‡é¢˜ï¼Œè€Œä¸”è‡³å°‘æœ‰äº”ä¸ªå­—ç¬¦ã€‚
 end

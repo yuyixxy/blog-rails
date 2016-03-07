@@ -4,6 +4,9 @@ class CreateComments < ActiveRecord::Migration
       t.string :commenter
       t.text :body
 
+      # this line adds an integer column called `article_id`.
+      t.references :article, index: true
+
       t.timestamps null: false
     end
   end
